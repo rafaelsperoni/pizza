@@ -5,7 +5,7 @@ const getAllTipos = async (req, res) => {
         const tiposPizza = await TipoPizza.findAll()
         res.json(tiposPizza)
     }catch(error){
-        console.error('Erro na busca por pizzas: ', error)
+        console.error('Erro na busca por tipos de pizzas: ', error)
         res.status(500).json({ error: 'Erro interno de servidor' })
     }
 }
